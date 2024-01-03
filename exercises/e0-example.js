@@ -7,8 +7,9 @@ import { data } from "../data/data";
 export function getFirstPlanetName(data) {
   // Your code goes here...
   const planets = data.planets;
-  //console.log(planets);
+  console.log(planets[0]);
   return planets[0].name;
+  
 }
 
 
