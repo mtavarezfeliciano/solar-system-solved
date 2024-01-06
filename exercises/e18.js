@@ -5,8 +5,23 @@
  */
 
 export function getGreatestDiscoveryYear(data) {
-  // Your code goes here...
-  // feel free to import your `maxBy` or `minBy` methods from previous lessons
+  let greatestYear = {};
+
+  for (let i = 0; i < data.asteroids.length; i++) {
+    const year = data.asteroids[i].discoveryYear;
+    greatestYear[year] = (greatestYear[year] || 0) + 1;
+    
+  }
+  let mostCommonYear;
+  let highestFrequency = 0;
+
+  for (const year in greatestYear) {
+    if (greatestYear[year] > highestFrequency) {
+      mostCommonYear = parseInt(year);
+      highestFrequency = greatestYear[year];
+    }
+  }
+  return mostCommonYear;
 }
 
 // === TEST YOURSELF ===
