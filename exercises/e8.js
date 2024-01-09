@@ -10,7 +10,6 @@ export function findPlanetNameByMoon(data, moonName) {
     .find((planet) => planet.moons.includes(moonName));
   return planetName.name;
 
-  return planetName;
 }
 
 // === TEST YOURSELF ===
